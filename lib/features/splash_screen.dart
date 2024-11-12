@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ryde_app/onboarding_screen.dart';
+import 'package:ryde_app/core/utils/extensions.dart';
+import 'package:ryde_app/features/onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   _redirectToHome(BuildContext context) {
     Future.delayed(
-        const Duration(seconds: 3),
+        const Duration(seconds: 4),
         () => context.mounted
             ? Navigator.pushReplacement(
                 context,
@@ -43,9 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
           child: Text(
             "Ryde",
-            style: Theme.of(context)
-                .textTheme
-                .displayLarge
+            style: context.text.displayLarge
                 ?.copyWith(color: Colors.white, fontFamily: GoogleFonts.racingSansOne().fontFamily),
           ),
         ),
