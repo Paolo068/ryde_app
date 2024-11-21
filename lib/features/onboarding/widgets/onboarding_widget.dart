@@ -15,7 +15,7 @@ class OnboardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      SizedBox(height: context.height * 0.1),
+      Gap( context.height * 0.1),
       image,
       const Gap(30),
       SizedBox(

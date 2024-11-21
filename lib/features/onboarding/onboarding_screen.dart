@@ -6,7 +6,7 @@ import 'package:ryde_app/core/utils/extensions.dart';
 import 'package:ryde_app/features/onboarding/widgets/onboarding_widget.dart';
 
 import '../../core/theme/pallete.dart';
-import '../home/home_screen.dart';
+import '../welcome_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -84,7 +84,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const Gap(25),
                 SizedBox(
                   width: context.width * 0.9,
-                  child: FilledButton(
+                  child: ElevatedButton(
                     onPressed: () {
                       if (_currentPage < 2) {
                         _pageController.nextPage(
@@ -93,7 +93,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         );
                       } else {
                         Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(builder: (context) => const HomeScreen()), (predicate) => false);
+                            MaterialPageRoute(builder: (context) => const WelcomeScreen()), (predicate) => false);
                       }
                     },
                     child: Text(_currentPage < 2 ? 'Next' : 'Get started'),

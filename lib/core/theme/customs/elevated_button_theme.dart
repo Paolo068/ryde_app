@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ryde_app/core/theme/pallete.dart';
 
-class AppFilledButtonTheme {
-  static final light = FilledButtonThemeData(
-    style: FilledButton.styleFrom(
-      minimumSize: const Size.fromHeight(50),
+class AppElevatedButtonTheme {
+  static final light = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      elevation: 0,
+      minimumSize: const Size.fromHeight(55),
       textStyle: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w600,
